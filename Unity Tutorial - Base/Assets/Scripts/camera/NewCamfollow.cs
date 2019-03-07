@@ -35,8 +35,8 @@ public class NewCamfollow : MonoBehaviour {
         Vector3 rot = transform.localRotation.eulerAngles;
         RotX = rot.x;
         RotY = rot.y;
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
 	}
 	
 	// Update is called once per frame

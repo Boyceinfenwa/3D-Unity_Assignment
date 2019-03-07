@@ -59,8 +59,9 @@ public class Movement : MonoBehaviour
             anim.SetBool("Backwards",true);
 
             Rigidbody ourBody = this.GetComponent<Rigidbody> ();
-       
-            Vector3 moveBack = new Vector3 (0.0f, 0.0f -0.025f);
+
+            float movement = Mathf.Lerp(0f, -0.025f, elapsedTime);
+            Vector3 moveBack = new Vector3 (0.0f, 0.0f, movement);
             moveBack = ourBody.transform.TransformDirection(moveBack);
             ourBody.transform.position += moveBack;
 
@@ -76,6 +77,16 @@ public class Movement : MonoBehaviour
             anim.SetFloat(hash.speedFloat, 0.01f);
             anim.SetBool("Backwards",false);
             nobackmov = true;
+        }
+
+        if (Input.GetKey (KeyCode.LeftControl))
+
+        {
+            anim.SetBool("Run", true);
+        }
+        else
+        {
+            anim.SetBool("Run", false);
         }
     }
 

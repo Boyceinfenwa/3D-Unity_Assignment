@@ -12,6 +12,7 @@ public class HashIDs : MonoBehaviour
     public int sneakingBool;
     public int speedFloat;
     public int backwardBool;
+    public int runBool;
 
     // Use this for initialization
 	void Start ()
@@ -29,6 +30,7 @@ public class HashIDs : MonoBehaviour
         speedFloat = Animator.StringToHash("Speed");
         sneakingBool = Animator.StringToHash("Sneaking");
         backwardBool = Animator.StringToHash("Backwards");
+        runBool = Animator.StringToHash("RUN_00F");
     }
 
 
